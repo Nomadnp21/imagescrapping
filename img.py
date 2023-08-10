@@ -1,0 +1,12 @@
+import requests
+import logging
+import os
+from bs4 import BeautifulSoup
+from urllib.request import urlopen
+
+save_dir="images/"
+if not os.path.exists(save_dir):
+    os.makedirs(save_dir)
+query="elon musk"
+#url=https://www.google.com/search?q=query&tbm=isch&ved=2ahUKEwj2r5efjtGAAxVzp2MGHbK3B2UQ2-cCegQIABAA&oq&gs_lcp=CgNpbWcQARgDMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnOgQIIxAnOgoIABCKBRCxAxBDOggIABCABBCxAzoHCAAQigUQQzoNCAAQigUQsQMQgwEQQ1CTE1i1GWDoiAFoA3AAeAKAAZkBiAHXBpIBAzAuNpgBAKABAaoBC2d3cy13aXotaW1nsAEKuAEDwAEB&sclient=img&ei=VlTUZPasIvPOjuMPsu-eqAY&bih=595&biw=1280&rlz=1C1JJTC_enIN1067IN1067
+response=requests.get(f"https://www.google.com/search?q={query}&tbm=isch&ved=2ahUKEwj2r5efjtGAAxVzp2MGHbK3B2UQ2-cCegQIABAA&oq&gs_lcp=CgNpbWcQARgDMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnMgcIIxDqAhAnOgQIIxAnOgoIABCKBRCxAxBDOggIABCABBCxAzoHCAAQigUQQzoNCAAQigUQsQMQgwEQQ1CTE1i1GWDoiAFoA3AAeAKAAZkBiAHXBpIBAzAuNpgBAKABAaoBC2d3cy13aXotaW1nsAEKuAEDwAEB&sclient=img&ei=VlTUZPasIvPOjuMPsu-eqAY&bih=595&biw=1280&rlz=1C1JJTC_enIN1067IN1067")
